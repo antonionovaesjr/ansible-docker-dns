@@ -1,22 +1,22 @@
 - hosts: docker-dns
   tasks:
-    - name: Add or modify peritos-api.exemplo.com.br A to 10.10.1.14"
+    - name: Add or modify file01.exemplo.com.br A to 10.10.1.14"
       nsupdate:
         key_name: "rndc-key"
-        key_secret: "t00eX9fVPbBnLwlfQkp3jw=="
-        server: "172.17.0.2"
-        zone: "exemplo.com.br"
-        record: "db01"
-        value: "10.10.1.14"
-        state: present
-
-    - name: Add or modify siga.exemplo.com.br A to 10.10.1.15"
-      nsupdate:
-        key_name: "rndc-key"
-        key_secret: "t00eX9fVPbBnLwlfQkp3jw=="
+        key_secret: "/XYKuTCPjI1NA7YY1KXd2g=="
         server: "172.17.0.2"
         zone: "exemplo.com.br"
         record: "file01"
+        value: "10.10.1.14"
+        state: absent
+
+    - name: Add or modify app01.exemplo.com.br A to 10.10.1.15"
+      nsupdate:
+        key_name: "rndc-key"
+        key_secret: "/XYKuTCPjI1NA7YY1KXd2g=="
+        server: "172.17.0.2"
+        zone: "exemplo.com.br"
+        record: "app01"
         value: "10.10.1.15"
-        state: present
+        state: absent
 
