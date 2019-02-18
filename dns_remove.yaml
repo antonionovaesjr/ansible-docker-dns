@@ -1,0 +1,22 @@
+- hosts: docker-dns
+  tasks:
+    - name: Add or modify file01.exemplo.com.br A to 10.10.1.14"
+      nsupdate:
+        key_name: "rndc-key"
+        key_secret: "B7tz9OtOnvUIWvqBxPxNHQ=="
+        server: "172.17.0.2"
+        zone: "exemplo.com.br"
+        record: "file01"
+        value: "10.10.1.14"
+        status: absent
+
+    - name: Add or modify exemplo.com.br A to 10.10.1.15"
+      nsupdate:
+        key_name: "rndc-key"
+        key_secret: "B7tz9OtOnvUIWvqBxPxNHQ=="
+        server: "172.17.0.2"
+        zone: "exemplo.com.br"
+        record: "app01"
+        value: "10.10.1.15"
+        status: absent
+

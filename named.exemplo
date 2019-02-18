@@ -1,9 +1,9 @@
-$TTL 3H
-@       IN SOA  ns1.exemplo.com.br. root.exemplo.com.br. (
+@       IN SOA  @ rname.invalid. (
                                         1       ; serial
                                         1D      ; refresh
                                         1H      ; retry
                                         1W      ; expire
                                         3H )    ; minimum
-	IN	NS      ns1.exemplo.com.br.
-ns1	IN	A	127.0.0.1
+        IN	NS      @
+        IN	A       127.0.0.1
+        IN	AAAA    ::1
