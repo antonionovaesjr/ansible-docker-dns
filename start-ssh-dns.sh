@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Usar variável de ambiente para passar usuário e senha (secret).
+#Usar variável de ambiente para passar usuário e senha (secret)..
 
 #SSH Server
 #Variável USER_CUSTOM e PASSWD_CUSTOM deve ser informado no momento do boot do container
