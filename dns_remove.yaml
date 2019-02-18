@@ -3,7 +3,7 @@
     - name: Add or modify file01.exemplo.com.br A to 10.10.1.14"
       nsupdate:
         key_name: "rndc-key"
-        key_secret: "B7tz9OtOnvUIWvqBxPxNHQ=="
+        key_secret: "chave que foi gerado durante a criação da imagem"
         server: "172.17.0.2"
         zone: "exemplo.com.br"
         record: "file01"
@@ -13,7 +13,7 @@
     - name: Add or modify exemplo.com.br A to 10.10.1.15"
       nsupdate:
         key_name: "rndc-key"
-        key_secret: "B7tz9OtOnvUIWvqBxPxNHQ=="
+        key_secret: "chave que foi gerado durante a criação da imagem"
         server: "172.17.0.2"
         zone: "exemplo.com.br"
         record: "app01"

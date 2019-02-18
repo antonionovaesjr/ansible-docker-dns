@@ -9,5 +9,3 @@ EXPOSE 22/tcp 53/udp 53/tcp
 ENTRYPOINT [ "/opt/start-ssh-dns.sh" ]
 
 
-#https://access.redhat.com/solutions/54644
-#http://linux-n-linux.blogspot.com/2012/10/resolve-rndc-error-in-rhel6-centos6.html
