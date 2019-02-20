@@ -1,0 +1,31 @@
+- hosts: kube-dns
+  vars:
+  - appweb: exemplo
+  - appapi: exemplo
+  - subdominio: exemplo.com.br
+  - dnskey: chavekey
+
+  tasks:
+
+### Publicação do serviço API
+    - name: "Adicionar o registro {{appapi}}.{{subdominio}} tipo A de valor 10.10.227.171"
+      nsupdate:
+        key_name: "rndc-key"
+        key_secret: "{{dnskey}}"
+        server: "10.10.227.239"
+        zone: "{{subdominio}}"
+        record: "{{appapi}}"
+        value: "10.10.227.171"
+        state: present
+
+### Publicação do serviço WEB
+    - name: "Adicionar o registro {{appweb}}.{{subdominio}} tipo A de valor 10.10.227.171"
+      nsupdate:
+        key_name: "rndc-key"
+        key_secret: "{{dnskey}}"
+        server: "10.10.227.239"
+        zone: "{{subdominio}}"
+        record: "{{appweb}}"
+        value: "10.10.227.171"
+        state: present
+

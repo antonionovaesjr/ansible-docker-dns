@@ -1,0 +1,12 @@
+- hosts: meu-host
+
+  vars:
+  - dbname: BANCOSECRETO
+  - dbuser: superlogin
+
+  tasks:
+  - name: Exibindo uma variável {{dbuser}}.{{dbname}}
+    shell: " /bin/echo {{ dbuser }} e {{ dbname }}"
+    register: hello
+
+  - debug: msg="{{ hello.stdout }}"
