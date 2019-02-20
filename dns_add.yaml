@@ -1,11 +1,11 @@
-- hosts: docker-dns
+- hosts: kube-dns
   tasks:
-    - name: "Adicionar o registro file01.exemplo.com.br tipo A de valor 10.10.1.16"
+    - name: "Adicionar o registro bancodocentes.dev.tjba.jus.br tipo A de valor 10.10.227.171"
       nsupdate:
         key_name: "rndc-key"
-        key_secret: "chave que foi gerado durante a criação da imagem"
-        server: "172.17.0.2"
-        zone: "exemplo.com.br"
-        record: "file01"
-        value: "10.10.1.16"
+        key_secret: "LnJNLWGOKlrCQGVoCUyk7Q=="
+        server: "10.10.227.239"
+        zone: "dev.tjba.jus.br"
+        record: "bancodocentes"
+        value: "10.10.227.171"
         state: present

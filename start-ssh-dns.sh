@@ -10,7 +10,15 @@ SSH_USERPASS="$PASSWD_CUSTOM"
 echo -e "$SSH_USERPASS\n$SSH_USERPASS" | (passwd --stdin $USER_CUSTOM)
 
 
-if [ ! -f /opt/primeiro_boot_nao_delete.txt ]; then
+
+if [ ! -f /var/named/primeiro_boot_nao_delete.txt ]; then
+
+cd /opt/var-conf
+cp -Rpav * /var/named/
+chown -R root:named /var/named/
+
+find /var/named/ -type d -exec chmod 775 {} \;
+find /var/named/ -type f -exec chmod 664 {} \;
 
 IPADDRESS=$(ip route|grep 'scope link'|awk '{print $9}')
 CHAVE_RNDC=$(grep -i secret /etc/rndc.conf |grep -v '#'|awk '{print $2}'|cut -d\" -f2)
@@ -20,19 +28,18 @@ sed -i "s/127.0.0.1/$IPADDRESS/g" /etc/rndc.conf
 
 #Editando o named.conf
 
-sed -i "s/127.0.0.1/$IPADDRESS/g" /etc/named.conf
-sed -i "s/RNDC_CHAVE/$CHAVE_RNDC/g" /etc/named.conf
-sed -i "s/exemplo.com.br/$DOMINIO/g" /etc/named.conf
+sed -i "s/127.0.0.1/$IPADDRESS/g" /var/named/named.conf
+sed -i "s/RNDC_CHAVE/$CHAVE_RNDC/g" /var/named/named.conf
+sed -i "s/exemplo.com.br/$DOMINIO/g" /var/named/named.conf
 
 #Editando o arquivo de domínio
 cp -pav /var/named/named.exemplo /var/named/db.$DOMINIO
 sed -i "s/127.0.0.1/$IPADDRESS/g" /var/named/db.$DOMINIO
 sed -i "s/rname.invalid/root.$DOMINIO/g" /var/named/db.$DOMINIO
 
-touch /opt/primeiro_boot_nao_delete.txt
+touch /var/named/primeiro_boot_nao_delete.txt
 
 fi
-
 
 
 #Bind Server DNS
@@ -41,4 +48,4 @@ fi
 #Iniciando serviços SSH e BIND
 
 /usr/sbin/sshd -D  &
-/usr/sbin/named -u named -c /etc/named.conf -f
+/usr/sbin/named -u named -c /var/named/named.conf -f

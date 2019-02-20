@@ -1,0 +1,37 @@
+managed-keys-zone: loaded serial 0
+zone 0.in-addr.arpa/IN: loaded serial 0
+db.dev.tjba.jus.br:1: no TTL specified; using SOA MINTTL instead
+zone dev.tjba.jus.br/IN: loaded serial 1
+zone 1.0.0.127.in-addr.arpa/IN: loaded serial 0
+zone 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa/IN: loaded serial 0
+zone localhost.localdomain/IN: loaded serial 0
+zone localhost/IN: loaded serial 0
+all zones loaded
+running
+address not available resolving 'dlv.isc.org/DNSKEY/IN': 2001:500:84::b#53
+address not available resolving './NS/IN': 2001:500:84::b#53
+address not available resolving 'dlv.isc.org/DNSKEY/IN': 2001:500:9f::42#53
+address not available resolving './NS/IN': 2001:500:9f::42#53
+address not available resolving 'ns.isc.afilias-nst.info/A/IN': 2001:503:c27::2:30#53
+address not available resolving 'ns.isc.afilias-nst.info/AAAA/IN': 2001:503:c27::2:30#53
+address not available resolving 'ns.isc.afilias-nst.info/A/IN': 2001:500:12::d0d#53
+address not available resolving 'ns.isc.afilias-nst.info/AAAA/IN': 2001:500:12::d0d#53
+address not available resolving 'ns.isc.afilias-nst.info/AAAA/IN': 2a01:8840:9::1#53
+address not available resolving 'ns.isc.afilias-nst.info/AAAA/IN': 2a01:8840:7::1#53
+address not available resolving 'ns.isc.afilias-nst.info/AAAA/IN': 2a01:8840:8::1#53
+address not available resolving 'ns.isc.afilias-nst.info/AAAA/IN': 2a01:8840:6::1#53
+address not available resolving 'dlv.isc.org/DNSKEY/IN': 2001:4f8:0:2::19#53
+address not available resolving 'dlv.isc.org/DNSKEY/IN': 2001:500:60::30#53
+address not available resolving 'dlv.isc.org/DNSKEY/IN': 2001:500:71::30#53
+address not available resolving 'dlv.isc.org/DLV/IN': 2001:4f8:0:2::19#53
+address not available resolving 'dlv.isc.org/DLV/IN': 2001:500:60::30#53
+address not available resolving 'dlv.isc.org/DLV/IN': 2001:500:71::30#53
+address not available resolving 'dlv.ams.sns-pb.isc.org/A/IN': 2001:500:2c::254#53
+address not available resolving 'dlv.ord.sns-pb.isc.org/A/IN': 2001:500:2c::254#53
+address not available resolving 'dlv.ord.sns-pb.isc.org/AAAA/IN': 2001:500:2c::254#53
+address not available resolving 'dlv.sfba.sns-pb.isc.org/A/IN': 2001:500:2c::254#53
+address not available resolving 'dlv.ams.sns-pb.isc.org/AAAA/IN': 2001:500:2c::254#53
+address not available resolving 'dlv.isc.org/DNSKEY/IN': 2001:500:2c::254#53
+address not available resolving 'ns2.isc.ultradns.net/AAAA/IN': 2001:500:d937::30#53
+address not available resolving 'ns2.isc.ultradns.net/AAAA/IN': 2001:501:b1f9::30#53
+address not available resolving 'ns2.isc.ultradns.net/AAAA/IN': 2001:502:7094::30#53
