@@ -5,3 +5,6 @@ Crie sua pŕopria imagem por motivo de segurança. A chave RNDC deve ser única 
 
 #### Ansible
 Mude os valores para poder fazer registro no DNS
+
+### Nota importante
+Não exponha a porta SSH para fora do host, mantenha somente dentro da rede virtual dos contêiners. Para sua segurança... rs
